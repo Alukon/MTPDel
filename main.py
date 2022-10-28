@@ -17,7 +17,9 @@ while 1:
         elif answr == 'q' or answr == 'Q' or answr == 'й' or answr == 'Й':
             num = sum(score)
             print('    Всего было {} примеров\n    Правильных ответов: {}%'.format(num, int(score[0] / num * 100)) if num else '')
-            break
+
+        elif answr == 'ё' or answr == 'Ё' or answr == '`' or answr == '~':
+            quit()
 
         else:
             rl = random.choice(result_loose)
@@ -36,7 +38,9 @@ while 1:
             num = sum(score)
             print(
                 '    Всего было {} примеров\n    Правильных ответов: {}%'.format(num, int(score[0] / num * 100)) if num else '')
-            break
+
+        elif answr == 'ё' or answr == 'Ё' or answr == '`' or answr == '~':
+            quit()
 
         else:
             rl = random.choice(result_loose)

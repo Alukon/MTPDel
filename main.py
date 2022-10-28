@@ -2,7 +2,7 @@ import random
 from random import randrange
 
 result_right = ['Светлая голова','Хвалю', 'Умничка', 'Молодчина', 'Умница-разумница','Браво','Белисимо']
-result_loose = ['Sorry', 'Упс:(', 'Пардон', 'Не обессудь', 'Не прогневайся', 'Прости великодушно']
+result_loose = ['    Sorry,', '    Упс:(,', '    Подумай,', '    Соберись,', '   Не сдавайся,', '    Запомни,']
 score = [0, 0]
 
 while 1:
@@ -10,18 +10,16 @@ while 1:
     if mult_devid == 0: # умножение
         x = randrange(2, 10)
         y = randrange(2, 10)
-        answr = input('{} x {} = '.format(x, y))
-        while not answr.isdigit() and answr != 'exit':
-            answr = input('Введите число!\n')
+        answr = input('     {} x {} = '.format(x, y))
 
         if answr == str(x * y):
-            rr = random.choice(result_right)
-            print(rr)
+            # rr = random.choice(result_right)
+            # print(rr)
             score[0] += 1
 
-        elif answr == 'exit':
+        elif answr == 'q' or answr == 'Q' or answr == 'й' or answr == 'Й':
             num = sum(score)
-            print('Всего было {} примеров\nПравильных ответов: {}%'.format(num, int(score[0] / num * 100)) if num else '')
+            print('    Всего было {} примеров\n    Правильных ответов: {}%'.format(num, int(score[0] / num * 100)) if num else '')
             break
 
         else:
@@ -32,19 +30,17 @@ while 1:
         x = randrange(2, 10)
         y = randrange(2, 10)
         z = x * y
-        answr = input('{} : {} = '.format(z, y))
-        while not answr.isdigit() and answr != 'exit':
-            answr = input('Введите число!\n')
+        answr = input('     {} : {} = '.format(z, y))
 
         if answr == str(z // y):
-            rr = random.choice(result_right)
-            print(rr)
+            # rr = random.choice(result_right)
+            # print(rr)
             score[0] += 1
 
-        elif answr == 'exit':
+        elif answr == 'q' or answr == 'Q' or answr == 'й' or answr == 'Й':
             num = sum(score)
             print(
-                'Всего было {} примеров\nПравильных ответов: {}%'.format(num, int(score[0] / num * 100)) if num else '')
+                '    Всего было {} примеров\n    Правильных ответов: {}%'.format(num, int(score[0] / num * 100)) if num else '')
             break
 
         else:

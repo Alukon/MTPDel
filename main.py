@@ -1,8 +1,7 @@
 import random
 from random import randrange
 
-result_right = ['Светлая голова','Хвалю', 'Умничка', 'Молодчина', 'Умница-разумница','Браво','Белисимо']
-result_loose = ['    Sorry,', '    Упс:(,', '    Подумай,', '    Соберись,', '   Не сдавайся,', '    Запомни,']
+result_loose = ['    Sorry,', '    Упс:(,', '    Подумай,', '    Соберись,', '    Не сдавайся,', '    Запомни,']
 score = [0, 0]
 
 while 1:
@@ -13,8 +12,6 @@ while 1:
         answr = input('     {} x {} = '.format(x, y))
 
         if answr == str(x * y):
-            # rr = random.choice(result_right)
-            # print(rr)
             score[0] += 1
 
         elif answr == 'q' or answr == 'Q' or answr == 'й' or answr == 'Й':
@@ -33,8 +30,6 @@ while 1:
         answr = input('     {} : {} = '.format(z, y))
 
         if answr == str(z // y):
-            # rr = random.choice(result_right)
-            # print(rr)
             score[0] += 1
 
         elif answr == 'q' or answr == 'Q' or answr == 'й' or answr == 'Й':

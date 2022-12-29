@@ -1,6 +1,9 @@
 import random
 from random import randrange
 
+print('    Чтобы получить результат решений,\nв конце, вместо ответа [ Q ] потом на [Ё] далее на [ENTER]')
+print('    Записывай ответ потом на [ENTER]')
+
 result_loose = ['    Sorry,', '    Упс:(,', '    Подумай,', '    Соберись,', '    Не сдавайся,', '    Запомни,']
 score = [0, 0]
 
@@ -9,7 +12,7 @@ while 1:
     if mult_devid == 0: # умножение
         x = randrange(2, 10)
         y = randrange(2, 10)
-        answr = input('     {} x {} = '.format(x, y))
+        answr = input('         {} x {} = '.format(x, y))
 
         if answr == str(x * y):
             score[0] += 1
@@ -29,7 +32,7 @@ while 1:
         x = randrange(2, 10)
         y = randrange(2, 10)
         z = x * y
-        answr = input('     {} : {} = '.format(z, y))
+        answr = input('         {} : {} = '.format(z, y))
 
         if answr == str(z // y):
             score[0] += 1
